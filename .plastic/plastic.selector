@@ -1,4 +1,0 @@
-repository "ConvaiGameThree/ConvaiGameThree@20067016552089@cloud"
-  path "/"
-    br "/main"
-    co "/main"
