@@ -25,4 +25,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
             SceneManager.LoadScene(2);
         }
     }
+
+    public void resetscene()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

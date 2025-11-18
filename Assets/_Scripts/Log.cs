@@ -1,18 +1,16 @@
+using Convai.Scripts.Runtime.Core;
+using Service;
 using System;
 using System.IO;
 using System.Text;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using Convai.Scripts.Runtime.UI;
-using Convai.Scripts.Runtime.Core;
-using Service;
 
 public class Log : MonoBehaviour
 {
     public string fileName = "ConversationLog.txt";
     private StringBuilder _builder = new StringBuilder();
 
-    private void Start()
+    private void OnEnable()
     {
         if (ConvaiGRPCAPI.Instance != null)
         {
@@ -20,11 +18,11 @@ public class Log : MonoBehaviour
         }
         else
         {
-            Debug.LogError("ConvaiGRPCAPI.Instance is null");
+            Debug.LogError("ConvaiGRPCAPI.Instance is null in OnEnable.");
         }
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         if (ConvaiGRPCAPI.Instance != null)
         {
@@ -34,18 +32,18 @@ public class Log : MonoBehaviour
 
     private void HandleResult(GetResponseResponse response)
     {
-        // Player text
-        if (response.UserQuery != null)
+        // Log finalized user query (speech input)
+        if (response.UserQuery != null && response.UserQuery.IsFinal)
         {
-            string text = response.UserQuery.TextData;
-            AppendLine($"Player: {text}");
+            string playerText = response.UserQuery.TextData;
+            AppendLine($"Player: {playerText}");
         }
 
-        // Character text
-        if (response.AudioResponse != null)
+        // Log character response
+        if (response.AudioResponse != null && !string.IsNullOrEmpty(response.AudioResponse.TextData))
         {
-            string text = response.AudioResponse.TextData;
-            AppendLine($"Character: {text}");
+            string characterText = response.AudioResponse.TextData;
+            AppendLine($"Character: {characterText}");
         }
     }
 
