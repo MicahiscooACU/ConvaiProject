@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.soupday.cc3_unity_tools": {
-      "version": "file:C:/ALL OTHER FILES/ITC/DET 370/CCIC Auto Setup for Unity/Install in Unity/CCiC-Unity-Tools",
+      "version": "file:C:/Users/micah/Downloads/CCIC_Auto_Setup_for_Unity/CCiC-Unity-Tools",
       "depth": 0,
       "source": "local",
       "dependencies": {

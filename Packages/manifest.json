@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.soupday.cc3_unity_tools": "file:C:/ALL OTHER FILES/ITC/DET 370/CCIC Auto Setup for Unity/Install in Unity/CCiC-Unity-Tools",
+    "com.soupday.cc3_unity_tools": "file:C:/Users/micah/Downloads/CCIC_Auto_Setup_for_Unity/CCiC-Unity-Tools",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "2.0.9",
     "com.unity.animation.rigging": "1.3.0",
