@@ -4292,8 +4292,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartConversation
   Character:
-  - {fileID: 919132148678679915}
   - {fileID: 919132149604464425}
+  - {fileID: 919132148678679915}
   CH: {fileID: 11400000, guid: ced7748cbbd346b4684c7b683403878c, type: 2}
 --- !u!1 &763709739 stripped
 GameObject:
