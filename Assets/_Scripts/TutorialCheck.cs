@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class TutorialCheck : MonoBehaviour
 {
@@ -15,8 +16,7 @@ public class TutorialCheck : MonoBehaviour
         else
         {
             
-            PlayerPrefs.SetInt("HasSeenTutorial", 1);
-            PlayerPrefs.Save();
+            
             canSkip = false;
         }
     }
@@ -32,5 +32,10 @@ public class TutorialCheck : MonoBehaviour
                 canSkip = false;
             }
         }
+    }
+
+    public void GoToTutorial()
+    {
+        SceneManager.LoadScene(2);
     }
 }
