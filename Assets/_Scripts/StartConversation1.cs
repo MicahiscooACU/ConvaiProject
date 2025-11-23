@@ -25,13 +25,13 @@ public class StartConversation : MonoBehaviour
         ConvaiNPC npc = FindObjectOfType<ConvaiNPC>();
 
         // Choose ID list based on randomIndex
-        if (randomIndex == 0)
+        if (randomIndex <= 5)
         {
             // male selection
             int malePick = Random.Range(0, CH.MaleIDs.Count);
             npc.characterID = CH.MaleIDs[malePick];
         }
-        else if (randomIndex == 1)
+        else if (randomIndex >=6)
         {
             // female selection
             int femalePick = Random.Range(0, CH.FemaleIDs.Count);
