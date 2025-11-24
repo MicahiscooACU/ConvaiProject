@@ -16,13 +16,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     public void clickedButton2() //load office
     {
-        if (TC.canSkip)
+        LoadingScreen LS = FindAnyObjectByType<LoadingScreen>();
+        if (LS != null)
         {
-            SceneManager.LoadScene(1);
-        }
-       else
-        {
-            SceneManager.LoadScene(2);
+            LS.LoadLevel();
         }
     }
 
