@@ -19,6 +19,10 @@ public class StartConversation : MonoBehaviour
             {
                Character[i].SetActive(false);
             }
+           else
+            {
+                Character[i].SetActive(true);
+            }
             
         }
 
