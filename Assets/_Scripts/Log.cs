@@ -9,8 +9,7 @@ public class Log : MonoBehaviour
 {
     public string fileName = "ConversationLog.txt";
     private StringBuilder _builder = new StringBuilder();
-
-    private void OnEnable()
+    private void Start()
     {
         if (ConvaiGRPCAPI.Instance != null)
         {
@@ -21,6 +20,10 @@ public class Log : MonoBehaviour
             Debug.LogError("ConvaiGRPCAPI.Instance is null in OnEnable.");
         }
     }
+    
+      
+       
+    
 
     private void OnDisable()
     {
