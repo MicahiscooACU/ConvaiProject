@@ -23,6 +23,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
     }
 
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
+
     public void resetscene()
     {
         SceneManager.LoadScene(1);
